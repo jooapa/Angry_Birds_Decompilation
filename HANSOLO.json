@@ -1,0 +1,1810 @@
+{
+	"comps": [
+		{
+			"type": "game::Animation",
+			"data": {
+				"version": "1.272",
+				"actions": {
+					"HANSOLO": {
+						"clips": {
+							"": {
+								"sourceResolution": [
+									800,
+									500
+								],
+								"targets": {
+									"Scene 1_0_SCENE_ROOT_L0": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														302,
+														98.7
+													]
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_SMALL_LIGHTNING_L0": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0.16,
+													[
+														225.1,
+														147.75
+													]
+												],
+												[
+													0.2,
+													[
+														166.25,
+														208.75
+													]
+												],
+												[
+													0.24,
+													[
+														155.15,
+														253.35
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0.16,
+													[
+														0.97,
+														0.97
+													]
+												],
+												[
+													0.2,
+													[
+														1.86,
+														1.86
+													]
+												],
+												[
+													0.24,
+													[
+														0.99,
+														0.99
+													]
+												]
+											]
+										},
+										"rotation": {
+											"type": "LinearFloat",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0.16,
+													0.384
+												],
+												[
+													0.2,
+													1.0996
+												],
+												[
+													0.24,
+													2.1817
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													null
+												],
+												[
+													0.16,
+													"SMALL_LIGHTNING"
+												],
+												[
+													0.28,
+													null
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_LIGHTWARP_L1": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														120.45,
+														169.45
+													]
+												],
+												[
+													0.04,
+													[
+														120.45,
+														169.5
+													]
+												],
+												[
+													0.16,
+													[
+														120.45,
+														169.85
+													]
+												],
+												[
+													0.18,
+													[
+														120.45,
+														169.85
+													]
+												],
+												[
+													0.2,
+													[
+														120.45,
+														169.8
+													]
+												],
+												[
+													0.32,
+													[
+														120.45,
+														169.8
+													]
+												],
+												[
+													0.5,
+													[
+														120.45,
+														169.85
+													]
+												],
+												[
+													0.72,
+													[
+														-36.85,
+														212.6
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														1.8,
+														1.8
+													]
+												],
+												[
+													0.04,
+													[
+														1.6,
+														1.6
+													]
+												],
+												[
+													0.16,
+													[
+														1,
+														1
+													]
+												],
+												[
+													0.18,
+													[
+														0.95,
+														0.95
+													]
+												],
+												[
+													0.2,
+													[
+														1,
+														1
+													]
+												],
+												[
+													0.5,
+													[
+														1,
+														1
+													]
+												],
+												[
+													0.72,
+													[
+														0.4,
+														0.4
+													]
+												]
+											]
+										}
+									},
+									"LIGHTWARP_1_EXPANDING_FADEOUT_RING_L0": {
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													"EXPANDING_FADEOUT_RING"
+												],
+												[
+													0.74,
+													null
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_TUTORIAL_ELEMENT_MAC_FINGER_L2": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0.94,
+													[
+														-115.75,
+														290
+													]
+												],
+												[
+													1.1,
+													[
+														-115.15,
+														290
+													]
+												],
+												[
+													1.4,
+													[
+														-126.15,
+														315
+													]
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													null
+												],
+												[
+													0.94,
+													"TUTORIAL_ELEMENT_MAC_FINGER"
+												],
+												[
+													1.62,
+													null
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_TUTORIAL_ELEMENT_MAC_FINGER_L3": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													2.2,
+													[
+														193.8,
+														283.3
+													]
+												],
+												[
+													2.34,
+													[
+														193.85,
+														280.3
+													]
+												],
+												[
+													2.54,
+													[
+														193.8,
+														283.3
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													2.2,
+													[
+														1.1,
+														1.1
+													]
+												],
+												[
+													2.34,
+													[
+														1,
+														1
+													]
+												],
+												[
+													2.54,
+													[
+														1.1,
+														1.1
+													]
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													null
+												],
+												[
+													2.2,
+													"TUTORIAL_ELEMENT_MAC_FINGER"
+												],
+												[
+													2.7,
+													null
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_RETICLE_RED_L5": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													2.44,
+													[
+														196.3,
+														222.3
+													]
+												],
+												[
+													2.7,
+													[
+														197.3,
+														222.3
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													2.44,
+													[
+														1,
+														1
+													]
+												],
+												[
+													2.7,
+													[
+														1.2,
+														1.2
+													]
+												],
+												[
+													2.98,
+													[
+														1,
+														1
+													]
+												],
+												[
+													3.16,
+													[
+														0.16,
+														0.16
+													]
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													null
+												],
+												[
+													2.44,
+													"RETICLE_RED"
+												],
+												[
+													3.18,
+													null
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_BIRD_MC_L6": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														130,
+														162.85
+													]
+												],
+												[
+													0.5,
+													[
+														130,
+														162.85
+													]
+												],
+												[
+													0.8,
+													[
+														-97,
+														225.85
+													]
+												],
+												[
+													1.1,
+													[
+														-97,
+														225.85
+													]
+												],
+												[
+													1.4,
+													[
+														-109,
+														246.85
+													]
+												],
+												[
+													1.6,
+													[
+														-109,
+														246.85
+													]
+												],
+												[
+													1.66,
+													[
+														-91.8,
+														206.3
+													]
+												],
+												[
+													1.72,
+													[
+														-70.9,
+														158.7
+													]
+												],
+												[
+													1.78,
+													[
+														-37.5,
+														111.7
+													]
+												],
+												[
+													1.84,
+													[
+														7.5,
+														77.4
+													]
+												],
+												[
+													1.9,
+													[
+														38.7,
+														61.1
+													]
+												],
+												[
+													1.96,
+													[
+														58.7,
+														54.4
+													]
+												],
+												[
+													2,
+													[
+														72.05,
+														49.95
+													]
+												],
+												[
+													3.18,
+													[
+														72.05,
+														49.95
+													]
+												],
+												[
+													3.24,
+													[
+														83.25,
+														47.3
+													]
+												],
+												[
+													3.3,
+													[
+														94.45,
+														47.95
+													]
+												],
+												[
+													3.36,
+													[
+														105.65,
+														43.8
+													]
+												],
+												[
+													3.42,
+													[
+														116.85,
+														43.65
+													]
+												],
+												[
+													3.48,
+													[
+														128.05,
+														43.9
+													]
+												],
+												[
+													3.54,
+													[
+														141.25,
+														44.9
+													]
+												],
+												[
+													3.6,
+													[
+														155.3,
+														46.2
+													]
+												],
+												[
+													3.66,
+													[
+														170.15,
+														47.85
+													]
+												],
+												[
+													3.72,
+													[
+														183.7,
+														51.85
+													]
+												],
+												[
+													3.78,
+													[
+														197.05,
+														55.1
+													]
+												],
+												[
+													3.84,
+													[
+														210.1,
+														60.7
+													]
+												],
+												[
+													3.9,
+													[
+														223.9,
+														66.5
+													]
+												],
+												[
+													3.96,
+													[
+														235.3,
+														72.5
+													]
+												],
+												[
+													4.02,
+													[
+														247.45,
+														78.7
+													]
+												],
+												[
+													4.08,
+													[
+														259.2,
+														85.2
+													]
+												],
+												[
+													4.14,
+													[
+														267.5,
+														94
+													]
+												],
+												[
+													4.2,
+													[
+														277.8,
+														101.8
+													]
+												],
+												[
+													4.96,
+													[
+														329.8,
+														162.7
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														3,
+														3
+													]
+												],
+												[
+													0.5,
+													[
+														3,
+														3
+													]
+												],
+												[
+													0.8,
+													[
+														0.8,
+														0.8
+													]
+												]
+											]
+										}
+									},
+									"BIRD_MC_6_BIRD_SW_YELLOW_NORMAL_L0": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														0,
+														-0.1
+													]
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													"BIRD_SW_YELLOW_NORMAL"
+												],
+												[
+													4.98,
+													null
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_BLASTER_BEAM_RED_L7": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													3.54,
+													[
+														139,
+														55.3
+													]
+												],
+												[
+													3.98,
+													[
+														201.95,
+														231.8
+													]
+												],
+												[
+													4,
+													[
+														210.45,
+														231.8
+													]
+												],
+												[
+													4.14,
+													[
+														232.95,
+														175.8
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													3.54,
+													[
+														0.6,
+														0.6
+													]
+												]
+											]
+										},
+										"rotation": {
+											"type": "LinearFloat",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													3.54,
+													1.242
+												],
+												[
+													3.98,
+													1.242
+												],
+												[
+													4,
+													1.9304
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													null
+												],
+												[
+													3.54,
+													"BLASTER_BEAM_RED"
+												],
+												[
+													4.16,
+													null
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_BLASTER_BEAM_RED_L8": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													3.36,
+													[
+														111,
+														58.3
+													]
+												],
+												[
+													3.86,
+													[
+														197.95,
+														234.3
+													]
+												],
+												[
+													3.88,
+													[
+														208.95,
+														234.3
+													]
+												],
+												[
+													4,
+													[
+														231.45,
+														181.8
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													3.36,
+													[
+														0.6,
+														0.6
+													]
+												]
+											]
+										},
+										"rotation": {
+											"type": "LinearFloat",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													3.36,
+													1.1677
+												],
+												[
+													3.86,
+													1.2034
+												],
+												[
+													3.88,
+													-1.1925
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													null
+												],
+												[
+													3.36,
+													"BLASTER_BEAM_RED"
+												],
+												[
+													4.02,
+													null
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_BLASTER_BEAM_RED_L9": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													3.18,
+													[
+														80,
+														64.3
+													]
+												],
+												[
+													3.68,
+													[
+														194,
+														219.25
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													3.18,
+													[
+														0.6,
+														0.6
+													]
+												]
+											]
+										},
+										"rotation": {
+											"type": "LinearFloat",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													3.18,
+													0.925
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													null
+												],
+												[
+													3.18,
+													"BLASTER_BEAM_RED"
+												],
+												[
+													3.7,
+													null
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_SMOKE_CLOUD_L10": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													3.68,
+													[
+														201,
+														225.55
+													]
+												]
+											]
+										}
+									},
+									"SMOKE_CLOUD_10_SMOKE_CLOUD_2_L0": {
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													null
+												],
+												[
+													3.68,
+													"SMOKE_CLOUD_2"
+												],
+												[
+													3.72,
+													null
+												]
+											],
+											"offset": 3.68
+										}
+									},
+									"SMOKE_CLOUD_10_SMOKE_CLOUD_3_L1": {
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													null
+												],
+												[
+													3.72,
+													"SMOKE_CLOUD_3"
+												],
+												[
+													3.76,
+													null
+												]
+											],
+											"offset": 3.68
+										}
+									},
+									"SMOKE_CLOUD_10_SMOKE_CLOUD_4_L2": {
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													null
+												],
+												[
+													3.76,
+													"SMOKE_CLOUD_4"
+												],
+												[
+													3.8,
+													null
+												]
+											],
+											"offset": 3.68
+										}
+									},
+									"SMOKE_CLOUD_10_SMOKE_CLOUD_5_L3": {
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													null
+												],
+												[
+													3.8,
+													"SMOKE_CLOUD_5"
+												],
+												[
+													3.84,
+													null
+												]
+											],
+											"offset": 3.68
+										}
+									},
+									"SMOKE_CLOUD_10_SMOKE_CLOUD_6_L4": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													3.84,
+													[
+														0,
+														-1
+													]
+												]
+											],
+											"offset": 3.68
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													null
+												],
+												[
+													3.84,
+													"SMOKE_CLOUD_6"
+												],
+												[
+													3.88,
+													null
+												]
+											],
+											"offset": 3.68
+										}
+									},
+									"SMOKE_CLOUD_10_SMOKE_CLOUD_7_L5": {
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													null
+												],
+												[
+													3.88,
+													"SMOKE_CLOUD_7"
+												],
+												[
+													3.92,
+													null
+												]
+											],
+											"offset": 3.68
+										}
+									},
+									"SCENE_ROOT_0_PIG_SW_TUSKEN_RAIDER_DAMAGED_SHUT_L11": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														199,
+														224
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														0.6,
+														0.6
+													]
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													"PIG_SW_TUSKEN_RAIDER_DAMAGED_SHUT"
+												],
+												[
+													3.76,
+													null
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_BLOCK_ROCK_1_6_L12": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														199,
+														258
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														0.8,
+														0.8
+													]
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													"BLOCK_ROCK_1_6"
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_BLOCK_ROCK_1_4_L13": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														249,
+														298.9
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														0.8,
+														0.8
+													]
+												]
+											]
+										},
+										"rotation": {
+											"type": "LinearFloat",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													1.5707
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													"BLOCK_ROCK_1_4"
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_BLOCK_ROCK_1_4_L14": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														149,
+														298.9
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														0.8,
+														0.8
+													]
+												]
+											]
+										},
+										"rotation": {
+											"type": "LinearFloat",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													1.5707
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													"BLOCK_ROCK_1_4"
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_SLING_SHOT_02_L15": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														-90.05,
+														229
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														0.62,
+														0.62
+													]
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													"SLING_SHOT_02"
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_BLOCK_ROCK_1_6_L16": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														356.4,
+														345.3
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														0.96,
+														1
+													]
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													"BLOCK_ROCK_1_6"
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_BLOCK_ROCK_1_6_L17": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														199.9,
+														345.3
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														0.96,
+														1
+													]
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													"BLOCK_ROCK_1_6"
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_BLOCK_ROCK_1_6_L18": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														44.6,
+														345.3
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														0.96,
+														1
+													]
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													"BLOCK_ROCK_1_6"
+												]
+											]
+										}
+									},
+									"SCENE_ROOT_0_BLOCK_ROCK_1_6_L19": {
+										"translation": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														-112.2,
+														345.3
+													]
+												]
+											]
+										},
+										"scale": {
+											"type": "LinearFloat2",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													[
+														0.96,
+														1
+													]
+												]
+											]
+										},
+										"sprite": {
+											"type": "DiscreteSprite",
+											"before": "CLAMP",
+											"after": "CLAMP",
+											"keyframes": [
+												[
+													0,
+													"BLOCK_ROCK_1_6"
+												]
+											]
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	],
+	"children": [
+		{
+			"name": "Scene 1_0_SCENE_ROOT_L0",
+			"children": [
+				{
+					"name": "SCENE_ROOT_0_BLOCK_ROCK_1_6_L19",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_BLOCK_ROCK_1_6_L18",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_BLOCK_ROCK_1_6_L17",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_BLOCK_ROCK_1_6_L16",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_SLING_SHOT_02_L15",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_BLOCK_ROCK_1_4_L14",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_BLOCK_ROCK_1_4_L13",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_BLOCK_ROCK_1_6_L12",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_PIG_SW_TUSKEN_RAIDER_DAMAGED_SHUT_L11",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_SMOKE_CLOUD_L10",
+					"children": [
+						{
+							"name": "SMOKE_CLOUD_10_SMOKE_CLOUD_7_L5",
+							"comps": [
+								{
+									"type": "game::SpriteComponent",
+									"data": {}
+								}
+							]
+						},
+						{
+							"name": "SMOKE_CLOUD_10_SMOKE_CLOUD_6_L4",
+							"comps": [
+								{
+									"type": "game::SpriteComponent",
+									"data": {}
+								}
+							]
+						},
+						{
+							"name": "SMOKE_CLOUD_10_SMOKE_CLOUD_5_L3",
+							"comps": [
+								{
+									"type": "game::SpriteComponent",
+									"data": {}
+								}
+							]
+						},
+						{
+							"name": "SMOKE_CLOUD_10_SMOKE_CLOUD_4_L2",
+							"comps": [
+								{
+									"type": "game::SpriteComponent",
+									"data": {}
+								}
+							]
+						},
+						{
+							"name": "SMOKE_CLOUD_10_SMOKE_CLOUD_3_L1",
+							"comps": [
+								{
+									"type": "game::SpriteComponent",
+									"data": {}
+								}
+							]
+						},
+						{
+							"name": "SMOKE_CLOUD_10_SMOKE_CLOUD_2_L0",
+							"comps": [
+								{
+									"type": "game::SpriteComponent",
+									"data": {}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_BLASTER_BEAM_RED_L9",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_BLASTER_BEAM_RED_L8",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_BLASTER_BEAM_RED_L7",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_BIRD_MC_L6",
+					"children": [
+						{
+							"name": "BIRD_MC_6_BIRD_SW_YELLOW_NORMAL_L0",
+							"comps": [
+								{
+									"type": "game::SpriteComponent",
+									"data": {}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_RETICLE_RED_L5",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_TUTORIAL_ELEMENT_MAC_FINGER_L3",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_TUTORIAL_ELEMENT_MAC_FINGER_L2",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_LIGHTWARP_L1",
+					"children": [
+						{
+							"name": "LIGHTWARP_1_EXPANDING_FADEOUT_RING_L0",
+							"comps": [
+								{
+									"type": "game::SpriteComponent",
+									"data": {}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "SCENE_ROOT_0_SMALL_LIGHTNING_L0",
+					"comps": [
+						{
+							"type": "game::SpriteComponent",
+							"data": {}
+						}
+					]
+				}
+			]
+		}
+	]
+}
