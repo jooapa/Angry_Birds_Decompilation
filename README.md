@@ -1,8 +1,8 @@
 # ANGRY BIRDS Decomp
 
 ## Usage
-You will need to have openssl installed and in your Environment variables.
-AND 7z installed.
+You will need to have [openssl](https://sourceforge.net/projects/openssl/) installed and in your Environment variables.
+AND [7z](https://www.7-zip.org/download.html) installed.
 and [Java Development Kit (JDK)](https://www.freecodecamp.org/news/how-to-set-up-java-development-environment-a-comprehensive-guide/)
 
 first of all the .lua file is needed to be in the same dir as the .jar and the batch file. Then just drag the lua file to the deLuacifier.bat file and it should do it automatically :)
