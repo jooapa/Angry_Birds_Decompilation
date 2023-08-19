@@ -51,5 +51,5 @@ Encrypt:
     openssl enc -aes-256-cbc -e -K [key] -iv 0 -in [name].lua.dec -out [name].lua
 
 # credos
-    credits half stuff found in this sketchy website
-    https://forum.xentax.com/viewtopic.php?t=9840
+Credits half stuff found in this sketchy website
+    <a>https://forum.xentax.com/viewtopic.php?t=9840</a>
