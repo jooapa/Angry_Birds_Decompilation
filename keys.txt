@@ -18,6 +18,10 @@ Angry Birds: Star Wars
 Str = An8t3mn8U6spiQ0zHHr3a1loDrRa3mtE
 Hex = 416E3874336D6E38553673706951307A4848723361316C6F44725261336D7445
 
+Angry Birds: Star Wars II
+Str = B0pm3TAlzkN9ghzoe2NizEllPdN0hQni
+Hex = 4230706D3354416C7A6B4E3967687A6F65324E697A456C6C50644E3068516E69
+
 Decrypt:
 openssl enc -aes-256-cbc -d -K [key] -iv 0 -in [name].lua -out [name].lua.dec
 

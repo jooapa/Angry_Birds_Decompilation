@@ -26,7 +26,7 @@ rem Get the base name of the dropped file (without extension)
 for %%F in ("%~1") do set "BaseName=%%~nF"
 
 rem Run the openssl decryption command
-openssl enc -aes-256-cbc -d -K 416E3874336D6E38553673706951307A4848723361316C6F44725261336D7445 -iv 0 -in "%~1" -out "%BaseName%.7z"
+openssl enc -aes-256-cbc -d -K 526D67645A304A656E4C466757776B5976434C326C5361684662456846656334 -iv 0 -in "%~1" -out "%BaseName%.7z"
 
 rem Create a folder named after the base name
 mkdir "%BaseName%"
