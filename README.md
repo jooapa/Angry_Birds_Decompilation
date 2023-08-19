@@ -3,7 +3,7 @@
 ## Usage
 You will need to have openssl installed and in your Environment variables.
 AND 7z installed.
-and <a href "https://www.freecodecamp.org/news/how-to-set-up-java-development-environment-a-comprehensive-guide/" >Java Development Kit (JDK) </a>
+and [Java Development Kit (JDK)]([https://duckduckgo.com](https://www.freecodecamp.org/news/how-to-set-up-java-development-environment-a-comprehensive-guide/))
 
 first of all the .lua file is needed to be in the same dir as the .jar and the batch file. Then just drag the lua file to the deLuacifier.bat file and it should do it automatically :)
 ### Manual Usage
