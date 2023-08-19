@@ -15,6 +15,7 @@ Decrypt:
 then you need to open the lua.dec file with 7z and extract the content or copy.
 then you should have .luac file, Don't panic if it says .lua rename it to .luac
 then run:
+
     java -jar unluac.jar "file.luac" > "file.lua"
 AND BOOM!
 
