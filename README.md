@@ -5,6 +5,8 @@ You will need to have <a href="https://sourceforge.net/projects/openssl/" target
  installed and in your Environment variables.
 AND <a href="https://www.7-zip.org/download.html" target="_blank">7z</a> installed.
 and <a href="https://www.freecodecamp.org/news/how-to-set-up-java-development-environment-a-comprehensive-guide/" target="_blank">Java Development Kit (JDK)</a>
+
+<a href="http://example.com/" target="_blank">example</a>
 first of all the .lua file is needed to be in the same dir as the .jar and the batch file. Then just drag the lua file to the deLuacifier.bat file and it should do it automatically :)
 ### Manual Usage
 You need to run this to the .lua file you want to en or decrypt
