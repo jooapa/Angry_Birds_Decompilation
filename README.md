@@ -7,6 +7,7 @@ AND 7z installed.
 first of all the .lua file is needed to be in the same dir as the .jar and the batch file. Then just drag the lua file to the deLuacifier.bat file and it should do it automatically :)
 ### Manual Usage
 You need to run this to the .lua file you want to en or decrypt
+
 Decrypt:
 
     openssl enc -aes-256-cbc -d -K [hex] -iv 0 -in [name].lua -out [name].lua.dec
