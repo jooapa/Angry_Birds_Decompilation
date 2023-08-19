@@ -4,6 +4,25 @@
 You will need to have openssl installed and in your Environment variables.
 AND 7z installed.
 
+first of all the .lua file is needed to be in the same dir as the .jar and the batch file. Then just drag the lua file to the deLuacifier.bat file and it should do it automatically :)
+### Manual Usage
+You need to run this to the .lua file you want to en or decrypt
+Decrypt:
+
+    openssl enc -aes-256-cbc -d -K [hex] -iv 0 -in [name].lua -out [name].lua.dec
+    
+then you need to open the lua.dec file with 7z and extract the content or copy.
+then you should have .luac file, Don't panic if it says .lua rename it to .luac
+then run:
+    java -jar unluac.jar "file.luac" > "file.lua"
+AND BOOM!
+
+Encrypt:
+
+    openssl enc -aes-256-cbc -e -K [hex] -iv 0 -in [name].lua.dec -out [name].lua
+
+
+
 ## Keys
 
 Angry Birds
@@ -42,13 +61,6 @@ Angry Birds: Star Wars II
     
     Hex = 4230706D3354416C7A6B4E3967687A6F65324E697A456C6C50644E3068516E69
 
-Decrypt:
-
-    openssl enc -aes-256-cbc -d -K [key] -iv 0 -in [name].lua -out [name].lua.dec
-
-Encrypt:
-
-    openssl enc -aes-256-cbc -e -K [key] -iv 0 -in [name].lua.dec -out [name].lua
 
 # credos
 Credits half stuff found in this sketchy forum site:
