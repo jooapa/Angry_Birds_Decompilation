@@ -34,7 +34,6 @@ mkdir "%BaseName%"
 rem Extract the .7z file to the created folder
 7z x "%BaseName%.7z" -o"%BaseName%"
 
-
 echo Extraction complete. Files extracted and extensions renamed to: ".luac"
 
 rem Move the extracted content to the script's folder
