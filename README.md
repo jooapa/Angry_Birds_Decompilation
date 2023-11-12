@@ -1,15 +1,16 @@
 # ANGRY BIRDS Decompilation
 
-## Usage
+## Where to install Angry Birds PC ports
+If you don't know how to install Angry Birds PC ports, [here](https://archive.org/details/angry-birds-pc) is a link to the Internet Archive page for the PC ports of Angry Birds.
+
+### Automatic Usage
+Drag and drop the .lua file to birdout.py and choose what angry birds game it is. Then it will decrypt it for you automatically.
+
+### Manual Usage
 You will need to have [openssl](https://sourceforge.net/projects/openssl/) installed and in your Environment variables.
 AND [7z](https://www.7-zip.org/download.html) installed in the terminal.
 and [Java Development Kit (JDK)](https://www.freecodecamp.org/news/how-to-set-up-java-development-environment-a-comprehensive-guide/). [The Sketchy unluac.jar is a decompiler for .luac files.](https://sourceforge.net/projects/unluac/)
 
-If you don't know how to install Angry Birds PC ports, [here](https://archive.org/details/angry-birds-pc) is a link to the Internet Archive page for the PC ports of Angry Birds.
-
-First of all the .lua file is needed to be in the same dir as the .jar and the batch file. Then just drag the lua file to the deLuacifier.bat file and it should do it automatically :)
-
-### Manual Usage
 You need to run this to the .lua file you want to en or decrypt
 
 Decrypt:
@@ -17,10 +18,11 @@ Decrypt:
     openssl enc -aes-256-cbc -d -K [hex] -iv 0 -in [name].lua -out [name].lua.dec
     
 then you need to open the lua.dec file with 7z and extract the content or copy.
-then you should have .luac file, Don't panic if it says .lua rename it to .luac
+then you should have .luac file. It will say that it is a .lua file but it is actually a .luac file.
+
 then run:
 
-    java -jar unluac.jar "file.luac" > "file.lua"
+    java -jar unluac.jar "file_encrypted.lua" > "file_decrypted.lua"
 AND BOOM!
 
 Encrypt:
