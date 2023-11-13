@@ -1,11 +1,14 @@
 import os, sys, subprocess
 import py7zr
 
-if len(sys.argv) != 2:
-    print("Usage: birdout.py <files.lua>")
+if len(sys.argv) == 0:
+    print("Usage: birdout.py <files.lua> <files.lua> ...")
     sys.exit(1)
 
-file = sys.argv[1]
+for file in sys.argv[1:]:
+    if not os.path.isfile(file):
+        print("File not found: " + file)
+        sys.exit(1) 
 
 inp = input('''
 CHOOSE Angry Birds Game:
@@ -56,4 +59,8 @@ def encrypt_file(hex, file, output_file):
 
 output_file = file + ".7z"
 extract_path = "out"
-encrypt_file(hex, file, output_file)
+
+# for loop encrypts all files passed as arguments
+for file in sys.argv[1:]:
+    encrypt_file(hex, file, output_file)
+
