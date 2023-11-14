@@ -4,7 +4,16 @@
 If you don't know how to install Angry Birds PC ports, [here](https://archive.org/details/angry-birds-pc) is a link to the Internet Archive page for the PC ports of Angry Birds.
 
 ### Automatic Usage
+Firstly install [Python 3](https://www.python.org/downloads/).
+´´´	
+pip install py7zr
+´´´
+
 Drag and drop the .lua file to birdout.py and choose what angry birds game it is. Then it will decrypt it for you automatically.
+or you can run it in the terminal with:
+´´´
+python birdout.py <file.lua> <file.lua> ...
+´´´
 
 ### Manual Usage
 You will need to have [openssl](https://sourceforge.net/projects/openssl/) installed and in your Environment variables.

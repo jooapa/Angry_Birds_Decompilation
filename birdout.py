@@ -2,7 +2,7 @@ import os, sys, subprocess
 import py7zr
 
 if len(sys.argv) == 0:
-    print("Usage: birdout.py <files.lua> <files.lua> ...")
+    print("Usage: birdout.py <file.lua> <file.lua> ...")
     sys.exit(1)
 
 for file in sys.argv[1:]:
