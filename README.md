@@ -1,13 +1,14 @@
 # ANGRY BIRDS Decompilation
 
 ## Where to install Angry Birds PC ports
+
 If you don't know how to install Angry Birds PC ports, [here](https://archive.org/details/angry-birds-pc) is a link to the Internet Archive page for the PC ports of Angry Birds.
 
-### Automatic Usage
+### Automatic Usage (only for decrypting)
+
 Firstly install [Python 3](https://www.python.org/downloads/).
 
     pip install py7zr
-
 
 Drag and drop the .lua file to birdout.py and choose what angry birds game it is. Then it will decrypt it for you automatically.
 or you can run it in the terminal with:
@@ -17,19 +18,18 @@ or you can run it in the terminal with:
 Understandable, if you don't trust the .exe or the .jar file: openssl.exe. here is a virustotal scan: [virustotal](https://www.virustotal.com/gui/file/be0f086b9303fd52b6f5ec094c753c2b68f02559eb462f23929e72a6996eb1f8/detection/f-be0f086b9303fd52b6f5ec094c753c2b68f02559eb462f23929e72a6996eb1f8-1703249224)
 and here scan for the unluac.jar: [virustotal](https://www.virustotal.com/gui/file/50f23c0b1cb85cc2bd07055ce782a918fdcb5d36d18d268b9606298d801bbb6e/detection/f-50f23c0b1cb85cc2bd07055ce782a918fdcb5d36d18d268b9606298d801bbb6e-1689512688)
 
+## Manual Usage
 
-### Manual Usage
 You will need to have [openssl](https://sourceforge.net/projects/openssl/) installed and in your Environment variables.
 AND [7z](https://www.7-zip.org/download.html) installed in the terminal.
 and [Java Development Kit (JDK)](https://www.freecodecamp.org/news/how-to-set-up-java-development-environment-a-comprehensive-guide/). [The Sketchy unluac.jar is a decompiler for .luac files.](https://sourceforge.net/projects/unluac/)
 
 You need to run this to the .lua file you want to en or decrypt
 
-Decrypt:
+### Decrypt
 
-    openssl enc -aes-256-cbc -d -K [hex] -iv 0 -in [name].lua -out [name].lua.dec
-    
-then you need to open the lua.dec file with 7z and extract the content or copy.
+    openssl enc -aes-256-cbc -d -K [hex] -iv 0 -in [name].lua -out [new_name].lua.7z
+then you need to open the new lua file with 7z and extract the content or copy.
 then you should have .luac file. It will say that it is a .lua file but it is actually a .luac file.
 
 then run:
@@ -37,9 +37,18 @@ then run:
     java -jar unluac.jar "file_encrypted.lua" > "file_decrypted.lua"
 AND BOOM!
 
-Encrypt:
+### Encrypt
 
-    openssl enc -aes-256-cbc -e -K [hex] -iv 0 -in [name].lua.dec -out [name].lua
+With encrypting you need to do the opposite of decrypting.
+Install [lua](https://www.lua.org/download.html)
+to compile the .lua file to a .luac file.
+
+    luac -o compiled.lua file.lua
+
+then you need to run this:  
+        7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on file_encrypted.lua.7z compiled.lua
+then you need to run this:
+    openssl enc -aes-256-cbc -e -K [hex] -iv 0 -in file_encrypted.lua.7z -out file_encrypted.lua
 
 ## Keys
 
@@ -79,10 +88,10 @@ Angry Birds: Star Wars II
     
     Hex = 4230706D3354416C7A6B4E3967687A6F65324E697A456C6C50644E3068516E69
 
+## credos
 
-# credos
 half stuff found in this sketchy forum site:
-    <a>https://web.archive.org/web/20231015200421/https://forum.xentax.com/viewtopic.php?t=9840</a>
+    [https://web.archive.org/web/20231015200421/https://forum.xentax.com/viewtopic.php?t=9840](https://web.archive.org/web/20231015200421/https://forum.xentax.com/viewtopic.php?t=9840) is a link to the forum post discussing the encryption of settings and highscores in Angry Birds Rio.
 Needed to save it in the wayback machine because the site is going to be shut down on December, 2023.
 Heres more forum stuff:
-<a>https://web.archive.org/web/20231015200746/https://xdaforums.com/t/q-angry-birds-rio-encrypts-settings-highscores-with-aes.1015380/<a>
+[https://web.archive.org/web/20231015200746/https://xdaforums.com/t/q-angry-birds-rio-encrypts-settings-highscores-with-aes.1015380/](https://web.archive.org/web/20231015200746/https://xdaforums.com/t/q-angry-birds-rio-encrypts-settings-highscores-with-aes.1015380/) is a link to the forum post discussing the encryption of settings and highscores in Angry Birds Rio.
