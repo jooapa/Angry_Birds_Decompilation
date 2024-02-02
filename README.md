@@ -51,9 +51,12 @@ to compile the .lua file to a .luac file.
 
     luac -o compiled.lua file.lua
 
-then you need to run this:  
-        7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on file_encrypted.lua.7z compiled.lua
 then you need to run this:
+
+        7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on file_encrypted.lua.7z compiled.lua
+
+then you need to run this:
+
     openssl enc -aes-256-cbc -e -K [hex] -iv 0 -in file_encrypted.lua.7z -out file_encrypted.lua
 
 ## Keys
