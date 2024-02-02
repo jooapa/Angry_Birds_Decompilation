@@ -40,8 +40,26 @@ def extract_7z(archive_path, extract_path):
 
 def encrypt_file(hex, file, output_file):
     if os.path.isfile(file):
+      # if windows
+      if os.name == 'nt':
         print("Encrypting " + file + "...")
         subprocess.call(["bin/openssl.exe", "enc", "-aes-256-cbc", "-d", "-K", hex, "-iv", "0", "-in", file, "-out", output_file])
+        extract_7z(output_file, extract_path)
+        os.remove(output_file)
+        os.remove(file)
+        # run java -jar bin/unluac.jar out/<file> > out/<file>.lua
+        subprocess.call(["java", "-jar", "bin/unluac.jar", "out/" + file], stdout=open("out/" + file + ".decypt", "w"))
+        # move decrypted file to root
+        os.rename("out/" + file + ".decypt", file)
+        # remove out folder and its contents
+        os.remove("out/" + file)
+        os.rmdir("out")
+
+        print("Done!")
+      # if linux use wine
+      elif os.name == 'posix':
+        print("Encrypting " + file + "...")
+        subprocess.call(["wine", "bin/openssl.exe", "enc", "-aes-256-cbc", "-d", "-K", hex, "-iv", "0", "-in", file, "-out", output_file])
         extract_7z(output_file, extract_path)
         os.remove(output_file)
         os.remove(file)
