@@ -20,6 +20,12 @@ and here scan for the unluac.jar: [virustotal](https://www.virustotal.com/gui/fi
 
 ## Manual Usage
 
+if using linux, use wine to run the openssl.exe file.
+
+```bash
+wine openssl.exe ...
+```
+
 You will need to have [openssl](https://sourceforge.net/projects/openssl/) installed and in your Environment variables.
 AND [7z](https://www.7-zip.org/download.html) installed in the terminal.
 and [Java Development Kit (JDK)](https://www.freecodecamp.org/news/how-to-set-up-java-development-environment-a-comprehensive-guide/). [The Sketchy unluac.jar is a decompiler for .luac files.](https://sourceforge.net/projects/unluac/)
