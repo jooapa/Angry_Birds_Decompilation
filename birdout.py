@@ -7,7 +7,7 @@ files = []
 
 org_path = os.path.dirname(os.path.realpath(__file__))
 # get directory of first file
-path_to_current_lua_file = os.path.dirname(arg_files[0])
+path_to_current_lua_file = []
 
 if len(arg_files) == 0:
     print("Usage: birdout.py <file.lua> <file.lua> ...")
@@ -18,25 +18,30 @@ for file in arg_files:
     # if directory
     if os.path.isdir(file):
         # loop through all files in directory and if extension is .lua, add to list
-        for root, dirs, arg_files in os.walk(file):
-            for file in arg_files:
-                if file.endswith(".lua"):
-                    file = os.path.join(root, file)
-                    print("File: " + file)
-        
-    if not os.path.isfile(file):
-        print("File not found: " + file)
-    else:
+        for root, dirs, files_in_dir in os.walk(file):
+            for file_in_dir in files_in_dir:
+                if file_in_dir.endswith(".lua"):
+                    file_path = os.path.join(root, file_in_dir)
+                    print("Found file: " + file_path)
+                    files.append(file_path)
+                    
+    elif os.path.isfile(file):
+        print("Found file: " + file)
         files.append(file)
+    else:
+        print("File not found: " + file)
 
 if len(files) == 0:
     print("No valid files found!")
     sys.exit(1)
+    
+# get directory of each file
+for file in files:
+    path_to_current_lua_file.append(os.path.dirname(file))
 
-# go to directory of first file
-os.chdir(path_to_current_lua_file)
 # remove the path from files
-files = [os.path.basename(file) for file in files]
+# files = [os.path.basename(file) for file in files]
+
 
 print("\nAngry Birds Lua Decryptor, works on for decrypting Angry Birds Lua files.")
 print("For Encrypting Luad files back,  Chech README.md")
@@ -111,6 +116,10 @@ extract_path = "out"
 
 # for loop encrypts all files passed as arguments
 for file in files:
+    os.chdir(org_path)
+    os.chdir(path_to_current_lua_file[files.index(file)])
+    # remove path from file
+    file = os.path.basename(file)
     decrypt_file(hex, file)
 
 print("nöf nöf! Done!")
