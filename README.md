@@ -4,7 +4,7 @@
 
 If you don't know how to install Angry Birds PC ports, [here](https://archive.org/details/angry-birds-pc) is a link to the Internet Archive page for the PC ports of Angry Birds.
 
-### Automatic Usage (only for decrypting)
+### Automatic decrypting
 
 Firstly install [Python 3](https://www.python.org/downloads/).
 
@@ -14,6 +14,10 @@ Drag and drop the .lua file to birdout.py and choose what angry birds game it is
 or you can run it in the terminal with:
 
     python birdout.py <file.lua> <file.lua> ...
+
+passing only a folder will decrypt all .lua files in the directory.
+
+    python birdout.py <directory>
 
 Understandable, if you don't trust the .exe or the .jar file: openssl.exe. here is a virustotal scan: [virustotal](https://www.virustotal.com/gui/file/be0f086b9303fd52b6f5ec094c753c2b68f02559eb462f23929e72a6996eb1f8/detection/f-be0f086b9303fd52b6f5ec094c753c2b68f02559eb462f23929e72a6996eb1f8-1703249224)
 and here scan for the unluac.jar: [virustotal](https://www.virustotal.com/gui/file/50f23c0b1cb85cc2bd07055ce782a918fdcb5d36d18d268b9606298d801bbb6e/detection/f-50f23c0b1cb85cc2bd07055ce782a918fdcb5d36d18d268b9606298d801bbb6e-1689512688)
