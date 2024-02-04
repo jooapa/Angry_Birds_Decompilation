@@ -7,8 +7,7 @@ If you don't know how to install Angry Birds PC ports, [here](https://archive.or
 ### Automatic decrypting
 
 Firstly install [Python 3](https://www.python.org/downloads/).
-
-    pip install py7zr
+You need to have [7z](https://www.7-zip.org/download.html) installed in the terminal.
 
 Drag and drop the .lua file to birdout.py and choose what angry birds game it is. Then it will decrypt it for you automatically.
 or you can run it in the terminal with:
