@@ -1,5 +1,7 @@
 # ANGRY BIRDS Decompilation
 
+![Preview of using Angry Birds Decompilation repo, birdout.py](.github/preview.gif)
+
 ## Where to install Angry Birds PC ports
 
 If you don't know how to install Angry Birds PC ports, [here](https://archive.org/details/angry-birds-pc) is a link to the Internet Archive page for the PC ports of Angry Birds.
