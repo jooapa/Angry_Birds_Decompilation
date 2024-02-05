@@ -21,7 +21,7 @@ passing only a folder will decrypt all .lua files in the directory.
     python birdout.py <directory> <directory> ...
 
 Understandable, if you don't trust the .exe or the .jar file: openssl.exe. here is a virustotal scan: [virustotal](https://www.virustotal.com/gui/file/be0f086b9303fd52b6f5ec094c753c2b68f02559eb462f23929e72a6996eb1f8/detection/f-be0f086b9303fd52b6f5ec094c753c2b68f02559eb462f23929e72a6996eb1f8-1703249224)
-and here scan for the unluac.jar: [virustotal](https://www.virustotal.com/gui/file/50f23c0b1cb85cc2bd07055ce782a918fdcb5d36d18d268b9606298d801bbb6e/detection/f-50f23c0b1cb85cc2bd07055ce782a918fdcb5d36d18d268b9606298d801bbb6e-1689512688). You can also just you own version of openssl if you already have on you PATH, just change the one line of code in the .py from `combined_path = os.path.join(org_path, "bin/openssl")` to `combined_path = "openssl"`
+and here scan for the unluac.jar: [virustotal](https://www.virustotal.com/gui/file/50f23c0b1cb85cc2bd07055ce782a918fdcb5d36d18d268b9606298d801bbb6e/detection/f-50f23c0b1cb85cc2bd07055ce782a918fdcb5d36d18d268b9606298d801bbb6e-1689512688). You can also just you own version of openssl if you already have on you PATH, just change the one line of code in the [.py](https://github.com/jooapa/Angry_Birds_Decompilation/blob/master/birdout.py#L119) from `combined_path = os.path.join(org_path, "bin/openssl")` to `combined_path = "openssl"`
 
 ## Manual Usage
 
