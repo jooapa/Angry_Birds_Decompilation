@@ -32,13 +32,13 @@ You need to run this to the .lua file you want to en or decrypt
 
 ### Decrypt
 
-    openssl enc -aes-256-cbc -d -K [hex] -iv 0 -in [name].lua -out [new_name].lua.7z
+    openssl enc -aes-256-cbc -d -K [hex] -iv 0 -in [name].lua -out [new_name].luac.7z
 then you need to open the new lua file with 7z and extract the content or copy.
-then you should have .luac file. It will say that it is a .lua file but it is actually a .luac file.
+then you should have .luac file.
 
 then run:
 
-    java -jar unluac.jar "file_encrypted.lua" > "file_decrypted.lua"
+    java -jar unluac.jar "file_encrypted.lua" > "file_decrypted.luac"
 AND BOOM!
 
 ### Encrypt
