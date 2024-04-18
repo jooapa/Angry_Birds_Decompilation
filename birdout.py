@@ -1,6 +1,6 @@
 import os, sys, subprocess
 
-class col:
+class C:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
     OKCYAN = '\033[96m'
@@ -22,14 +22,97 @@ org_path = os.path.dirname(os.path.realpath(__file__))
 path_to_current_lua_file = []
 
 if len(arg_files) == 0:
-    print(col.FAIL + "Usage: birdout.py <file.lua> <file.lua> ..." + col.ENDC)
+    print(C.FAIL + "Usage: birdout.py <file.lua> <file.lua> ..." + C.ENDC)
     print("You can also pass a directory as an argument to decrypt all .lua files in it.")
     sys.exit(1)
+
+bin_folder_exists = False
+# check if bin folder exists
+if not os.path.exists(os.path.join(org_path, "bin")):
+    print(f"{C.FAIL}bin folder not found! nöf nöf!{C.ENDC}")
+    bin_folder_exists = False
+else:
+    bin_folder_exists = True
     
+# check if openssl is installed
+have_openSSL = False
+if os.name == 'nt':
+    try:
+        subprocess.run(["openssl", "version"], capture_output=True)
+        have_openSSL = True
+        print(f"{C.OKGREEN}OpenSSL found!{C.ENDC}")
+    except FileNotFoundError:
+        have_openSSL = False
+        print(f"{C.FAIL}OpenSSL not found! {C.WARNING}Using the bundled version of OpenSSL in the bin folder.{C.ENDC}")
+elif os.name == 'posix':
+    try:
+        subprocess.run(["which", "openssl"], capture_output=True)
+        have_openSSL = True
+        print(f"{C.OKGREEN}OpenSSL found!{C.ENDC}")
+    except FileNotFoundError:
+        have_openSSL = False
+        print(f"{C.FAIL}OpenSSL not found!\n{C.WARNING}Using the bundled version of OpenSSL in the bin folder.{C.ENDC}")
+
+if not bin_folder_exists and not have_openSSL:
+    print(f"{C.FAIL}No bin folder so can't use bundled OpenSSL! nöf nöf!{C.ENDC}\n{C.WARNING}Please install OpenSSL and add it to PATH or download the bin folder from the repository.{C.ENDC}")
+    sys.exit(1)
+
+# check if java is installed
+have_java = False
+if os.name == 'nt':
+    try:
+        subprocess.run(["java", "-version"], capture_output=True)
+        have_java = True
+        print(f"{C.OKGREEN}Java found!{C.ENDC}")
+    except FileNotFoundError:
+        have_java = False
+        print(f"{C.FAIL}Java not found!{C.ENDC}")
+elif os.name == 'posix':
+    try:
+        subprocess.run(["which", "java"], capture_output=True)
+        have_java = True
+        print(f"{C.OKGREEN}Java found!{C.ENDC}")
+    except FileNotFoundError:
+        have_java = False
+        print(f"{C.FAIL}Java not found!{C.ENDC}")
+        
+if not have_java:
+    print(f"{C.FAIL}Java is required for decrypting .lua files! \nTry using this guide https://www.freecodecamp.org/news/how-to-set-up-java-development-environment-a-comprehensive-guide/{C.ENDC}")
+    sys.exit(1)
+    
+# check if unluac.jar exists
+if not os.path.exists(os.path.join(org_path, "bin", "unluac.jar")):
+    print(f"{C.FAIL}unluac.jar not found! nöf nöf!{C.WARNING}\n Add unluac.jar to the bin folder.{C.ENDC}")
+    sys.exit(1)
+    
+# check if 7z is installed
+have_7z = False
+if os.name == 'nt':
+    try:
+        subprocess.run(["7z", "version"], capture_output=True)
+        have_7z = True
+        print(f"{C.OKGREEN}7z found!{C.ENDC}")
+    except FileNotFoundError:
+        have_7z = False
+        print(f"{C.FAIL}7z not found!{C.ENDC}")
+elif os.name == 'posix':
+    try:
+        subprocess.run(["which", "7z"], capture_output=True)
+        have_7z = True
+        print(f"{C.OKGREEN}7z found!{C.ENDC}")
+    except FileNotFoundError:
+        have_7z = False
+        print(f"{C.FAIL}7z not found!{C.ENDC}")
+        
+if not have_7z:
+    print(f"{C.FAIL}7z is required for extracting .7z files!{C.ENDC}")
+    sys.exit(1)    
+    
+# ask user if they want to decrypt only .lua files
 onlyLuaFiles = True
 
 while True:
-    onlyLuaFiles = input("\nDo you want to decrypt only .lua files? " + col.GREY + "(y/n): " + col.ENDC)
+    onlyLuaFiles = input("\nDo you want to decrypt only .lua files? " + C.GREY + "(y/n): " + C.ENDC)
     if onlyLuaFiles == "y" or onlyLuaFiles == "n":
         if onlyLuaFiles == "y":
             onlyLuaFiles = True
@@ -37,7 +120,7 @@ while True:
             onlyLuaFiles = False
         break
     else:
-        print(f"{col.FAIL}Invalid input! nöf nöf!{col.ENDC}")
+        print(f"{C.FAIL}Invalid input! nöf nöf!\nyes or no{C.ENDC}")
         
     
 for file in arg_files:
@@ -48,17 +131,17 @@ for file in arg_files:
             for file_in_dir in files_in_dir:
                 if file_in_dir.endswith(".lua") or not onlyLuaFiles:
                     file_path = os.path.join(root, file_in_dir)
-                    print(col.OKGREEN + "Found file: " + file_path + col.ENDC)
+                    print(C.OKGREEN + "Found file: " + file_path + C.ENDC)
                     files.append(file_path)
                     
     elif os.path.isfile(file):
-        print(col.OKGREEN + "Found file: " + file + col.ENDC)
+        print(C.OKGREEN + "Found file: " + file + C.ENDC)
         files.append(file)
     else:
-        print(col.FAIL + "File not found: " + file + col.ENDC)
+        print(C.FAIL + "File not found: " + file + C.ENDC)
 
 if len(files) == 0:
-    print(col.FAIL + "No valid Files!" + col.ENDC)
+    print(C.FAIL + "No .lua files found! nöf nöf!" + C.ENDC)
     sys.exit(1)
     
 # get directory of each file
@@ -68,18 +151,18 @@ for file in files:
 # remove the path from files
 # files = [os.path.basename(file) for file in files]
 
-print(col.HEADER)
-print("\nAngry Birds Lua Decryptor"+ col.ENDC +", works on for decrypting Angry Birds game files.")
-print("For " + col.UNDERLINE + "Encrypting" + col.ENDC + " files back to og, " + col.BOLD + "Check README.md" + col.ENDC)
+print(C.HEADER)
+print("\nAngry Birds Lua Decryptor"+ C.ENDC +", works on for decrypting Angry Birds game files.")
+print("For " + C.UNDERLINE + "Encrypting" + C.ENDC + " files back to og, " + C.BOLD + "Check README.md" + C.ENDC)
 
 inp = input(f''' 
-{col.HEADER}CHOOSE Angry Birds Game: {col.ENDC}
-{col.BOLD}1.{col.ENDC} Angry Birds
-{col.BOLD}2.{col.ENDC} Angry Birds Rio
-{col.BOLD}3.{col.ENDC} Angry Birds Seasons
-{col.BOLD}4.{col.ENDC} Angry Birds Space
-{col.BOLD}5.{col.ENDC} Angry Birds Star Wars
-6{col.BOLD}.{col.ENDC} Angry Birds Star Wars II
+{C.HEADER}CHOOSE Angry Birds Game: {C.ENDC}
+{C.BOLD}1.{C.ENDC} Angry Birds
+{C.BOLD}2.{C.ENDC} Angry Birds Rio
+{C.BOLD}3.{C.ENDC} Angry Birds Seasons
+{C.BOLD}4.{C.ENDC} Angry Birds Space
+{C.BOLD}5.{C.ENDC} Angry Birds Star Wars
+6{C.BOLD}.{C.ENDC} Angry Birds Star Wars II
             ''')
 
 if inp == '1':   # Angry Birds
@@ -95,11 +178,11 @@ elif inp == '5': # Angry Birds Star Wars
 elif inp == '6': # Angry Birds Star Wars II
     hex = "4230706D3354416C7A6B4E3967687A6F65324E697A456C6C50644E3068516E69"
 else:
-    print(f"{col.FAIL}Invalid input! nöf nöf!{col.ENDC}")
+    print(f"{C.FAIL}Invalid input! nöf nöf!{C.ENDC}")
     sys.exit(1)
 
 def extract_7z(archive_path, extract_path):
-    print(f"Extracting {col.OKBLUE}" + archive_path + f"{col.ENDC}...")
+    print(f"Extracting {C.OKBLUE}" + archive_path + f"{C.ENDC}...")
     try:
         if '7Z' in os.environ:
             seven_zip_path = os.environ['7Z']
@@ -108,26 +191,33 @@ def extract_7z(archive_path, extract_path):
 
         subprocess.run([seven_zip_path, "x", archive_path, f"-o{extract_path}"])
     except subprocess.CalledProcessError:
-        print(f"{col.FAIL}Error: Not a 7z archive! File might be corrupted somehow or it already has been decrypted.{col.ENDC}")
+        print(f"{C.FAIL}Error: Not a 7z archive! File might be corrupted somehow or it already has been decrypted.{C.ENDC}")
         os.remove(archive_path)
         sys.exit(1)
 
 def decrypt_file(hex, file):
-    print(f"Decrypting {col.OKBLUE}" + file + f"{col.ENDC}...")
+    print(f"Decrypting {C.OKBLUE}" + file + f"{C.ENDC}...")
     output_file = file + ".7z"
     
-    combined_path = os.path.join(org_path, "bin/openssl")
+    if have_openSSL:
+        combined_path = "openssl"
+    else:
+        combined_path = os.path.join(org_path, "bin/openssl")
+        
     if os.name == 'nt':
         decryption_result = subprocess.run([combined_path, "enc", "-aes-256-cbc", "-d", "-K", hex, "-iv", "0", "-in", file, "-out", output_file], capture_output=True)
     elif os.name == 'posix':
-        decryption_result = subprocess.run(["wine", combined_path, "enc", "-aes-256-cbc", "-d", "-K", hex, "-iv", "0", "-in", file, "-out", output_file], capture_output=True)
+        if have_openSSL:
+            decryption_result = subprocess.run(["openssl", "enc", "-aes-256-cbc", "-d", "-K", hex, "-iv", "0", "-in", file, "-out", output_file], capture_output=True)
+        else:
+            decryption_result = subprocess.run(["wine", combined_path, "enc", "-aes-256-cbc", "-d", "-K", hex, "-iv", "0", "-in", file, "-out", output_file], capture_output=True)
 
     if decryption_result.returncode != 0:
-        print(f"{col.FAIL}You might have entered the wrong game file or the file is corrupted. Decrypting failed! nöf nöf! \nor the file has been already decrypted{col.ENDC}")
+        print(f"{C.FAIL}You might have entered the wrong game file or the file is corrupted. Decrypting failed! nöf nöf! \nor the file has been already decrypted{C.ENDC}")
         os.remove(file + ".7z")
         
         while True:
-            continue_still = input(f"\nDo you want to continue with the next file? " + col.GREY + "(y/n): " + col.ENDC)
+            continue_still = input(f"\nDo you want to continue with the next file? " + C.GREY + "(y/n): " + C.ENDC)
             if continue_still == "y" or continue_still == "n":
                 if continue_still == "y":
                     pass
@@ -135,7 +225,7 @@ def decrypt_file(hex, file):
                     sys.exit(1)
                 break
             else:
-                print(f"{col.FAIL}Invalid input! nöf nöf!{col.ENDC}")
+                print(f"{C.FAIL}Invalid input! nöf nöf!{C.ENDC}")
         return
     
     extract_7z(output_file, extract_path)
@@ -157,7 +247,7 @@ def decrypt_file(hex, file):
         # remove out folder
         os.rmdir("out")
 
-    print(f"{col.OKCYAN}Done! {file} decrypted!{col.ENDC}")
+    print(f"{C.OKCYAN}Done! {file} decrypted!{C.ENDC}")
 
 extract_path = "out"
 
@@ -169,4 +259,4 @@ for file in files:
     file = os.path.basename(file)
     decrypt_file(hex, file)
 
-print(col.OKGREEN + "nöf nöf! Done!" + col.ENDC)
+print(C.OKGREEN + "nöf nöf! Done!" + C.ENDC)
