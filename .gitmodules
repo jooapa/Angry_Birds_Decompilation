@@ -1,0 +1,6 @@
+# [submodule "SpriteDATGenerator"]
+#     path = SpriteDATGenerator
+#     url = https://github.com/AB360-org/SpriteDATGenerator.git
+[submodule "SpriteDATGenerator"]
+	path = SpriteDATGenerator
+	url = https://github.com/AB360-org/SpriteDATGenerator.git
